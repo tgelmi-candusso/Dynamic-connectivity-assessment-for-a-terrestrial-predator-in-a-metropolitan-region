@@ -59,7 +59,6 @@ m <- fixef(habmodel22)
 land_var <- c('NDVI', 'POP', 'BUP', 'DT_LT', 'DT_MT', 'DT_HT', 'DT_NT', 'DT_PS')
 i=2
 for (i in 1:length(land_var)){
-  
   ### create dummy tables for estimate rss
   s2 <-data.frame(matrix(, nrow=200, ncol=0))
   s2 <- s2 %>% mutate(
@@ -169,7 +168,7 @@ for (i in 1:length(land_var)){
     ggtitle(land_var[i])
 }
 
-#note rss values will be useful for next step
+#note rds objects will be used in next step
 
 
 
