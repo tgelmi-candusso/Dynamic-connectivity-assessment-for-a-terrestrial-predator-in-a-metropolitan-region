@@ -39,7 +39,6 @@ coyote_steps <- readRDS("coyote_steps_clean.rds")
 # we generate a dummy table recreating the value range of the variable while all others remain constant
 #and use the coefficient of the model to estimate the relative selection 
 #strength across each value
-# not the most efficient code
 
 ###define "m" - with the model being used for the RSS #######
 m <- fixef(habmodel22)
@@ -92,7 +91,7 @@ for (i in 1:length(land_var)){
   s1$log_rss_recalc<-0 
   s1 <- remove_rownames(s1) 
   
-  #summarize the table to what we need for each variable
+  #summarize the table to what we need for each variable -  yes you could just do this, the rest of the constant landscape variables are representative of what we are analyzing here, which is variation in selection when all other landscape variables are constant
   table_juice <- s1[grepl(land_var[i], names(s1))]
   names(table_juice)<-c("var", "cos")
   
@@ -139,7 +138,7 @@ for (i in 1:length(land_var)){
   ggplot(table_juice, aes(x = var, y = log_rss_recalc )) +
     geom_line(linewidth = 1) +
     geom_hline(yintercept = 0, linetype = "dashed", color = "gray30") +
-    xlab("Distance to public service linear features (scaled)") +
+    xlab("Landscape variable range (scaled)") +
     ylab("logRSS") +
     theme_bw()+
     scale_y_continuous()+
@@ -150,7 +149,7 @@ for (i in 1:length(land_var)){
   ggplot(table_juice, aes(x = var, y = exp(log_rss_recalc) )) +
     geom_line(size = 1) +
     geom_hline(yintercept = 0, linetype = "dashed", color = "gray30") +
-    xlab("Distance to public service linear features (scaled)") +
+    xlab("Landscape variable range (scaled)") +
     ylab("RSS") +
     theme_bw()+
     scale_y_continuous()+

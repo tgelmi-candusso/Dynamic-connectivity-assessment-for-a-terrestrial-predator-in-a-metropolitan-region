@@ -1,5 +1,6 @@
-####### Step 5: create COST SURFACE MAPS with RSS coefficients #######
+####### Step 5a: create COST SURFACE MAPS with RSS coefficients #######
 
+#this is for models WITHOUT interaction factors
 #the estimate of cost surface value or resistance values, is based on the selection strength of coyote across the range of values of each landscape variable.
 #Each cell in the map will have a combination of the landscape variables, and each will contribute a level of resistance to the map cell. 
 # This script is for the habitat model that has no interaction factors
@@ -44,6 +45,7 @@ for (i in 1:length(land_var)){
   b0 <- stats["intercept"]
   by <- stats["coefficient"]
   
+
   #fix map so they all assemble nicely 
   landscape_layer <- readRDS(paste0(land_var[i],"_clean.rds"))
 
