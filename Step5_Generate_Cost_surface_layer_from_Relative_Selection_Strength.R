@@ -70,5 +70,5 @@ Cost_surface_layer <- calc(resistance_layers,sum)
 Cost_surface_layer <- Cost_surface_layer - minValue(Cost_surface_layer) +1 #bring all to zero and add 1 so it can run in omniscape
 #plot(Cost_surface_layer)
 
-writeRaster(Cost_surface_layer, "Landscape_only_model_Cost_surface_layer.tif", overwrite=TRUE) #differentiate for each model
+writeRaster(Cost_surface_layer, "Resistance_layer_habitat-only-model.tif", overwrite=TRUE) #differentiate for each model
 
