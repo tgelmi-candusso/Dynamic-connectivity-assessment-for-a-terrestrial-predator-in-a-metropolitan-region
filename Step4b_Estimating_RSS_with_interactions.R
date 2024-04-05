@@ -144,23 +144,23 @@ for (i in 1:length(land_var)){
         ))
     }
     
-    ## FOR THREE LEVEL INTERACTION FACTORS - estimate RSS this way instead #note level 3 is implied in the level1&level2 = 0
-    for (j in 1:length(table_juice$log_rss_recalc)){ #s1 and table_juice have the same number of rows, they just vary in columns, since table_juice is the clean version of s1, so this looping works because of that
-      if (table_juice$level1[j] == "0" && table_juice$level2[j] == "0") {
-        table_juice$log_rss_recalc[j] <- 
-          (m$cond[grepl(land_var[i], names(m$cond))][[1]]*(table_juice$var[j]-table_juice$cos[j]))
-      } else if (table_juice$level1[j] == "1" ) { #breeding =1
-        table_juice$log_rss_recalc[j] <- 
-          ((table_juice$var[j]-table_juice$cos[j])*(m$cond[grepl(land_var[i], names(m$cond))][[1]]+
-                                                      m$cond[grepl(land_var[i], names(m$cond))][[2]]))
-      } else if (table_juice$level2[j] == "1" ) { #dispersal = 1
-        table_juice$log_rss_recalc[j] <- 
-          ((table_juice$var[j]-table_juice$cos[j])*(m$cond[grepl(land_var[i], names(m$cond))][[1]]+
-                                                      m$cond[grepl(land_var[i], names(m$cond))][[3]]))
-      }
-    }
-    
-  }
+  #   ## FOR THREE LEVEL INTERACTION FACTORS - estimate RSS this way instead #note level 3 is implied in the level1&level2 = 0
+  #   for (j in 1:length(table_juice$log_rss_recalc)){ #s1 and table_juice have the same number of rows, they just vary in columns, since table_juice is the clean version of s1, so this looping works because of that
+  #     if (table_juice$level1[j] == "0" && table_juice$level2[j] == "0") {
+  #       table_juice$log_rss_recalc[j] <- 
+  #         (m$cond[grepl(land_var[i], names(m$cond))][[1]]*(table_juice$var[j]-table_juice$cos[j]))
+  #     } else if (table_juice$level1[j] == "1" ) { #breeding =1
+  #       table_juice$log_rss_recalc[j] <- 
+  #         ((table_juice$var[j]-table_juice$cos[j])*(m$cond[grepl(land_var[i], names(m$cond))][[1]]+
+  #                                                     m$cond[grepl(land_var[i], names(m$cond))][[2]]))
+  #     } else if (table_juice$level2[j] == "1" ) { #dispersal = 1
+  #       table_juice$log_rss_recalc[j] <- 
+  #         ((table_juice$var[j]-table_juice$cos[j])*(m$cond[grepl(land_var[i], names(m$cond))][[1]]+
+  #                                                     m$cond[grepl(land_var[i], names(m$cond))][[3]]))
+  #     }
+  #   }
+  #   
+  # }
   
 
   #linear regression -- TWO LEVEL INTERACTION FACTORS
