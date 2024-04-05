@@ -21,17 +21,6 @@ library(buildmer)
 getwd()
 setwd("C:/Users/tizge/Documents/Toronto project/Coyote tracking by MNRF/Resource Selection Function/ResourceSelectionFunction")
 
-####raster###
-##call rasters for landscape variables
-NDVI <- readRDS("NDVI_clean.rds")
-POP <- readRDS("POP_clean.rds")
-BUP <- readRDS("BUP_clean.rds")
-DT_LT <- readRDS("DT_LT_clean.rds")
-DT_MT <- readRDS("DT_MT_clean.rds")
-DT_HT <- readRDS("DT_HT_clean.rds")
-DT_NT <- readRDS("DT_NT_clean.rds")
-DT_PS <- readRDS("DT_PS_clean.rds")
-
 
 ############RSS############ 
 
@@ -60,7 +49,7 @@ land_var <- c('NDVI', 'POP', 'BUP', 'DT_LT', 'DT_MT', 'DT_HT', 'DT_NT', 'DT_PS')
 i=2
 for (i in 1:length(land_var)){
   ### create dummy tables for estimate rss
-  s2 <-data.frame(matrix(, nrow=200, ncol=0))
+  s2 <-data.frame(matrix(nrow=200, ncol=0))
   s2 <- s2 %>% mutate(
     NDVI_nd =  mean(coyote_steps$NDVI_end),
     POP_end =  mean(coyote_steps$POP_end),
@@ -75,7 +64,7 @@ for (i in 1:length(land_var)){
   
     # generate the columns with values within the range of each landscape variable (scaled - as in model)
   if (land_var[i] == 'NDVI'){
-    s1$NDVI_nd = seq(from = -2.8, to =2.7, length.out = 200) 
+    s1$NDVI_nd = seq(from = -2.8, to =2.7, length.out = 200) #min max obtained from min max of landscape variable scaled raster layers 
     s1$NDVI_x2 <- s2$NDVI_nd
   } else if(land_var[i] == 'POP'){
     s1$POP_end = seq(from = -0.7, to =15.8, length.out = 200)
