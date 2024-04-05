@@ -6,7 +6,7 @@ The main difference to previous attempts at using habitat selection analysis to 
 
 Our method using RSS allows to integrate the natural variability in selection the animal shows for each component of the landscape included in the habitat selection analysis.
 
-![](https://github.com/tgelmi-candusso/Dynamic-connectivity-assessment-for-a-terrestrial-predator-in-a-metropolitan-region?tab=readme-ov-file/blob/main/images/image_method.jpg?raw=true)
+![Resistance values](images/image_method.jpg)
 
 For example, if we have three cells with landscape value 1,2,3, and we use only the selection coefficient (i.e. 5) provided by the habitat selection analysis we will have a selection value of (5x1), (5x2), (5x3) across these cells and we could convert this to resistance either directly (5), (10), (15), a linear increase in resistance across the landscape values. Alternatively, if we use some kind of relationship predefined by a researcher, the relationship is either static across the range of values of all landscape components, or predetermined differently across landscape components, eitherway defined by a researcher, not the data.
 
