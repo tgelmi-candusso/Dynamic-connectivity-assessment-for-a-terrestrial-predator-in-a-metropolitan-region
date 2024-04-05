@@ -14,15 +14,9 @@ Instead if we use the RSS, we use the relationship curve between selection and l
 
 For example, if the RSS shows an exponential growth in selection, as we saw with the vegetation index, we will have a selection strength of 1, 2, 10 for the cells with values 1, 2, 3. Therefore, selection values across those cells will be (1x1), (2x2), (10x3), i.e. 1, 4, 30. Representing better the stronger change in selection at higher vegetation values, than at lower vegetation values. If we transfer this on to resistance by flipping the curve, the resistance will stay stronger across lower vegetation values for longer as values increase and will rapidly decline passed a certain threshold, mirroring the relative selection curve of that specific landscape component. This allows for more variability when we are adding the contribution of the different landscape components. 
 
-and we can use this for 
+![Landscape components](images/Figure2a.jpg)
 
-|        -
-|        -
-|       -    -> RSS curve  
-|      -
-|-----
------------
-landscape value
+--------------------------------------------------
 
 The repository includes scripts for:
 
