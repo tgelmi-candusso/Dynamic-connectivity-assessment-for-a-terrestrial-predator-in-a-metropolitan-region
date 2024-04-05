@@ -6,19 +6,13 @@ The main difference to previous attempts at using habitat selection analysis to 
 
 Our method using RSS allows to integrate the natural variability in selection the animal shows for each component of the landscape included in the habitat selection analysis.
 
-For example, if we have three cells with landscape value 1,2,3, and we use only the selection coefficient (i.e. 5) provided by the habitat selection analysis we will have a selection value of (5*1), (5*2), (5*3) across these cells and we could convert this to resistance either directly (5), (10), (15), a linear increase in resistance across the landscape values. Alternatively, if we use some kind of relationship predefined by a researcher, the relationship is either static across the range of values of all landscape components, or predetermined differently across landscape components, eitherway defined by a researcher, not the data.
+![](https://github.com/tgelmi-candusso/Dynamic-connectivity-assessment-for-a-terrestrial-predator-in-a-metropolitan-region?tab=readme-ov-file/blob/main/images/image_method.jpg?raw=true)
 
-|
-|
------------ -> coefficient value is static 
-|
-|
------------
-landscape value
+For example, if we have three cells with landscape value 1,2,3, and we use only the selection coefficient (i.e. 5) provided by the habitat selection analysis we will have a selection value of (5x1), (5x2), (5x3) across these cells and we could convert this to resistance either directly (5), (10), (15), a linear increase in resistance across the landscape values. Alternatively, if we use some kind of relationship predefined by a researcher, the relationship is either static across the range of values of all landscape components, or predetermined differently across landscape components, eitherway defined by a researcher, not the data.
 
 Instead if we use the RSS, we use the relationship curve between selection and landscape variable specific to each landscape variable. 
 
-For example, if the RSS shows an exponential growth in selection, as we saw with the vegetation index, we will have a selection strength of 1, 2, 10 for the cells with values 1, 2, 3. Therefore, selection values across those cells will be (1*1), (2*2), (10*3), i.e. 1, 4, 30. Representing better the stronger change in selection at higher vegetation values, than at lower vegetation values. If we transfer this on to resistance by flipping the curve, the resistance will stay stronger across lower vegetation values for longer as values increase and will rapidly decline passed a certain threshold, mirroring the relative selection curve of that specific landscape component. This allows for more variability when we are adding the contribution of the different landscape components. 
+For example, if the RSS shows an exponential growth in selection, as we saw with the vegetation index, we will have a selection strength of 1, 2, 10 for the cells with values 1, 2, 3. Therefore, selection values across those cells will be (1x1), (2x2), (10x3), i.e. 1, 4, 30. Representing better the stronger change in selection at higher vegetation values, than at lower vegetation values. If we transfer this on to resistance by flipping the curve, the resistance will stay stronger across lower vegetation values for longer as values increase and will rapidly decline passed a certain threshold, mirroring the relative selection curve of that specific landscape component. This allows for more variability when we are adding the contribution of the different landscape components. 
 
 and we can use this for 
 
