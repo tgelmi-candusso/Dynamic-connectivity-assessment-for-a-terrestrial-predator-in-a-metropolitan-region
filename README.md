@@ -32,6 +32,6 @@ The repository includes scripts for:
 
 If you apply the code provided here please cite the published paper. 
 
-Don't hesitate to contact me if you are running into issues adapting any part this code to your analysis. 
+Don't hesitate to contact me if you are running into issues adapting any part of this code to your analysis. 
 
 
