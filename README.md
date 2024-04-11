@@ -21,7 +21,7 @@ For example, if the RSS shows an exponential growth in selection, as we saw with
 The repository includes scripts for:
 
 - Cleaning GPS collar data, we do not provide the raw GPS data, as I have no ownership.
-- Extracting steps from GPS data, random steps and extracting landscape information at each step. The repository include the final object from this code.
+- Extracting steps from GPS data, random steps and extracting landscape information at each step. The repository includes the final object from this code.
 - Habitat selection analysis using GLMMTMB because it allows for the direct integration of random effects into the model structure. (Muff et al. 2020)
 - Estimating Relative Selection Strength following Avgar et al, 2017, for each landscape variable and each model both without and with interactions (a, base model, b. dynamic model)
 - Generating Cost surface maps, or resistance layers, from the Relative Selection Strength of each Landscape variable to be used in Connectivity analysis. 
