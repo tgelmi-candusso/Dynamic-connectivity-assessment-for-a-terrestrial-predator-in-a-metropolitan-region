@@ -2,7 +2,7 @@ This code replicates the analysis published in https://esajournals.onlinelibrary
 
 Gelmi-Candusso, T.A., Chin, A.T., Thompson, C.A., McLaren, A.A., Wheeldon, T.J., Patterson, B.R. and Fortin, M.-J. (2024), Dynamic connectivity assessment for a terrestrial predator in a metropolitan region. Front Ecol Environ e2633. https://doi.org/10.1002/fee.2633
 
-The code here is used to estimate resistance values from a habitat selection analysis but with the novelty of using the relative selection strength (RSS) of each landscape component.
+The code in this repository is used to estimate resistance values from a habitat selection analysis but with the novelty of using the relative selection strength (RSS) of each landscape component.
 
 The main difference to previous attempts at using habitat selection analysis to estimate resistance is that here we use the relative selection strength for each landscape component, which generates a selection curve for each landscape component.- see Figure 2 a in the paper. Previous research instead have used either directly the selection coefficient given in the habitat selection analysis, or a relationship curve between this coefficient value and resistance, predefined by the researchers. 
 
