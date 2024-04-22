@@ -1,4 +1,5 @@
 This code replicates the analysis published in https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/fee.2633 
+Gelmi-Candusso, T.A., Chin, A.T., Thompson, C.A., McLaren, A.A., Wheeldon, T.J., Patterson, B.R. and Fortin, M.-J. (2024), Dynamic connectivity assessment for a terrestrial predator in a metropolitan region. Front Ecol Environ e2633. https://doi.org/10.1002/fee.2633
 
 The code here is used to estimate resistance values from a habitat selection analysis but with the novelty of using the relative selection strength (RSS) of each landscape component.
 
