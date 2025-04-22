@@ -37,7 +37,8 @@ land_var <- c('NDVI', 'POP', 'BUP', 'DT_LT', 'DT_MT', 'DT_HT', 'DT_NT', 'DT_PS')
 i=8
 #read stats_rss table from step 4 if it's not present in the environment.
 stats_table_all <- readRDS ("stats_table_all.rds")
-resistance_layers <- stack()
+resistance_layers_level0 <- stack()
+resistance_layers_level1 <- stack()
 
 for (i in 1:length(land_var)){
   #get values needed to estimate resistance
